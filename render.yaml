@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: heart-disease-api
+    env: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHONUNBUFFERED
+        value: 1
